@@ -1,5 +1,7 @@
 # FoodieBot
 Designed a Foodie Bot using HTML, CSS, JavaScript, and OpenAPI for result retrieval. Employed Few-Shot Prompts to recommend meals based on user mood and weather conditions
+![image](https://github.com/sathyark652/FoodieBot/assets/117423140/e6e8bcb0-e227-4728-8240-713cd5fc7f38)
+
 ## Technologies Used
 - HTML
 - CSS
@@ -21,5 +23,13 @@ Open index.html in your web browser.
 Recommendations based on user mood and weather conditions.
 Utilizes Few-Shot Prompts for improved results.
 Easy integration of OpenAPI key via env.js.
+![IMG-20230726-WA0001](https://github.com/sathyark652/FoodieBot/assets/117423140/4082a29a-d5c2-4529-996c-fe6c9cf7652f)
+
+ ### the result is 
+
+![IMG-20230726-WA0003](https://github.com/sathyark652/FoodieBot/assets/117423140/a397a0a8-9497-4abc-8ace-4e1d5793b347)
+
+
+
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
