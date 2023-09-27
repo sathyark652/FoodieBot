@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Foodie Thingy</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Poppins:wght@400;700&display=swap"
+		rel="stylesheet">
+		<link rel="stylesheet" href="index.css">
+	</head>
+
+	<body>
+		<header>
+			<img src="./images/fastfood_worker.svg" alt="food man icon"> 
+			<a href="/"><span>Feeling</span> Foodie</a>
+		</header>
+		<main>	
+			<!-- The Setup -->	
+			<section id="setup-container">
+				<div class="setup-inner">
+					<img src="./images/bottalk-removebg-preview.png">
+					<div class="speech-bubble-ai" id="speech-bubble-ai">
+						<p id="movie-boss-text">
+							Tell me how you feel and I'll suggest a suitable food!
+						</p>
+					</div>
+				</div>
+
+
+				<br>
+				<label for="fellings">How are you feeling?</label>
+				<br><br>
+				<div class="feelings" id="feelings">
+					<input type="checkbox" id="feelings-type-1" name="feelings-type" value="Nauseous">
+					<label for="feelings-type-1">Nauseous</label>
+					<input type="checkbox" id="feelings-type-2" name="feelings-type" value="Hungry">
+					<label for="feelings-type-2">Hungry</label>
+					<input type="checkbox" id="feelings-type-3" name="feelings-type" value="Depressed">
+					<label for="feelings-type-3">Depressed</label>
+					<input type="checkbox" id="feelings-type-4" name="feelings-type" value="Cold/Cough">
+					<label for="feelings-type-4">Cold/Cough</label>
+					<input type="checkbox" id="feelings-type-5" name="feelings-type" value="Happy">
+					<label for="feelings-type-5">Happy</label>
+					<input type="checkbox" id="feelings-type-6" name="feelings-type" value="Sad">
+					<label for="feelings-type-6">Sad</label>
+				</div>
+				<br>
+				<label for="fellings">What kind of food whould you like to eat?</label>
+				<br><br>
+				<div class="feelings" id="food-type">
+					<input type="checkbox" id="food-type-1" name="food-type" value="Nostalgic">
+					<label for="food-type-1">Nostalgic</label>
+					<input type="checkbox" id="food-type-2" name="food-type" value="Comforting">
+					<label for="food-type-2">Comforting</label>
+					<input type="checkbox" id="food-type-3" name="food-type" value="Energizing">
+					<label for="food-type-3">Energizing</label>
+					<input type="checkbox" id="food-type-4" name="food-type" value="Indulgent">
+					<label for="food-type-4">Indulgent</label>
+					<input type="checkbox" id="food-type-5" name="food-type" value="Filling">
+					<label for="food-type-5">Filling</label>
+					<input type="checkbox" id="food-type-6" name="food-type" value="Exotic">
+					<label for="food-type-6">Exotic</label>
+					
+				</div>
+				<br>
+				<div>
+					<label for="location">Where are you?</label>
+					<textarea id="loc-text" placeholder="Type here"></textarea>
+				</div>
+				<label for="setup-textarea">Anything else you want to tell me?</label>
+				<div class="setup-inner setup-input-container" id="setup-input-container">
+					
+					<textarea id="setup-textarea"></textarea>
+					<button class="send-btn" id="send-btn" aria-label="send">
+							<img src="./images/send.png" alt="send">
+					</button>
+				</div>
+			</section>	
+			<!-- The Output -->	
+			<section class="output-container" id="output-container">
+				<div id="output-img-container" class="output-img-container"></div>
+				<h1 id="output-title"></h1>
+				<h4 id="output-desc"></h4>
+				<p id="output-text"></p>
+			</section>
+		</main>	
+		<footer>
+			&copy; 2023 Feeling Foodie All rights reserved
+		</footer>
+		<script type="module" src="index.js"></script>
+		<!-- Include the jQuery library -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+		<!-- Include the env.js file -->
+		<script src="env.js"></script>
+	</body>
+
+</html>

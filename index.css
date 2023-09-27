@@ -1,0 +1,321 @@
+:root {
+    /* Your color variables */
+    --white: #ffffff;
+    --light: #f5f5f5;
+    --pink: #ff176b;
+    --dark: #242526;
+    --medium-dark: #d6c7c7e3;
+    --border-rad-lg: 15px;
+    --purple:#d117ff;
+    --green:#5dca36;
+    --blue:#4ebeef;
+    --Cashmere:#5dabf4;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--medium-dark);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+  }
+  
+  label[for="fellings"] + label[for="feelings"] {
+    margin-top: 1rem;
+  }
+  /* =================
+        Typography 
+       ================= */
+  
+  h1 {
+    font-family: 'Playfair Display SC', serif;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 1rem 0;
+  }
+  
+  h2 {
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+  
+  p {
+    line-height: 1.5;
+  }
+  
+  /* =================
+        Sections 
+       ================= */
+  
+  header {
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3em;
+    padding: 1rem 0;
+  }
+  
+  header>img {
+    height: 26px;
+  }
+  
+  header>a {
+    color: var(--light);
+    font-size: 1.5em;
+    text-decoration: none;
+  }
+  
+  header span {
+    font-weight: 700;
+  }
+  
+  main {
+    padding: 0 1em;
+  }
+  
+  section {
+    margin: 0 auto;
+    background-color: var(--light);
+    border-radius: var(--border-rad-lg);
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    max-width: 55vw;
+  }
+  
+  /* =================
+        Setup 
+       ================= */
+  
+    .setup-inner {
+        display: flex;
+        justify-content: space-around;
+        padding: 1.5rem;
+        min-height: 234px;
+    }
+  
+  .setup-inner>img {
+    width: 40%;
+    filter: drop-shadow(3px 2px 3px var(--medium-dark));
+    align-self: center;
+  }
+  
+  .setup-input-container {
+    min-height: 74px;
+  }
+  
+  .speech-bubble-ai {
+    max-width: 55%;
+    min-height: 124px;
+    border-radius: var(--border-rad-lg);
+    position: relative;
+    margin: 0;
+    border: 3px solid var(--medium-dark);
+    background-color: var(--white);
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .speech-bubble-ai:before {
+    content: "";
+    position: absolute;
+    border-left: 9px solid transparent;
+    border-right: 9px solid var(--medium-dark);
+    border-top: 9px solid var(--medium-dark);
+    border-bottom: 9px solid transparent;
+    left: -21px;
+    top: 64px;
+  }
+  
+  .speech-bubble-ai:after {
+    content: "";
+    position: absolute;
+    border-left: 7px solid transparent;
+    border-right: 7px solid var(--white);
+    border-top: 7px solid var(--white);
+    border-bottom: 7px solid transparent;
+    left: -11px;
+    top: 68px;
+  }
+  
+  .speech-bubble-ai>p {
+    padding: 0 1.3em;
+    color: var(--dark);
+    font-size: 1rem;
+  }
+  
+  textarea,
+  input[type="text"] {
+    background-color: var(--light-grey);
+    padding: .8rem;
+    border: none;
+    border-radius: var(--border-rad-lg);
+    width: 100%;
+    resize: none;
+    min-height: 40px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  textarea:focus,
+  input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  textarea::placeholder,
+  input[type="text"]::placeholder {
+    color: var(--medium-dark);
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  /* larger mobiles+ */
+  
+  @media(min-width: 380px) {
+    .setup-input-container {
+      padding-top: 0;
+    }
+  
+    .speech-bubble-ai:before {
+      top: 92px;
+    }
+  
+    .speech-bubble-ai:after {
+      top: 96px;
+    }
+  
+    .speech-bubble-ai>p {
+      font-size: 1rem;
+    }
+  
+    textarea::placeholder,
+    input[type="text"]::placeholder {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+  }
+  
+  /* =================
+        Selection Buttons
+       ================= */
+  
+      .feelings input[type="checkbox"] + label {
+        background-color: var(--white);
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      /* Style for labels when the checkbox is checked */
+      .feelings input[type="checkbox"]:checked + label {
+        background-color: var(--purple);
+        color: var(--white);
+        border: 2px solid var(--green); /* Add a green border */
+
+        &[for="feelings-type-6"] { /* Sad */
+          background-color: red;
+          border-color: red;
+        }
+      }
+
+    
+  
+  /* =================
+        Buttons & SVG 
+       ================= */
+  
+  button {
+    border: none;
+    background: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border-radius: var(--border-rad-lg);
+  }
+  
+  button:hover {
+    background-color: var(--dark);
+  }
+  
+  .send-btn {
+    border-top-right-radius: var(--border-rad-lg);
+    border-bottom-right-radius: var(--border-rad-lg);
+    min-width: 50px;
+  }
+  
+  .send-btn>img {
+    width: 1.6em;
+    vertical-align: middle;
+  }
+  
+  .view-pitch-btn {
+    color: var(--light);
+    border-radius: var(--border-rad-lg);
+    padding: 1em;
+    margin: 0.4em auto;
+    display: block;
+    font-size: 1.2em;
+    text-align: center;
+    cursor: pointer;
+    background-color: var(--dark);
+  }
+  
+  .view-pitch-btn:hover {
+    box-shadow: 1px 1px 5px 1px var(--medium-dark);
+  }
+  
+  img.loading {
+    max-width: 40px;
+    filter: none;
+  }
+  
+  /* =================
+        Output 
+       ================= */
+  
+.output-container {
+        display: none;
+        flex-direction: column;
+        margin: 1em auto;
+        color: var(--dark);
+        padding: 1em;
+        text-align: center;
+} 
+  
+.output-img-container>img {
+        max-width: 100%;
+        border-radius: var(--border-rad-lg);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+  
+  /* =================
+        Footer 
+       ================= */
+  
+  footer {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 0.8em;
+    font-size: 0.7em;
+    text-align: center;
+  }
+  
+  /* Additional Customizations */
+  
+  /* Add any additional customizations here, like adjusting colors, spacing, and font sizes to your liking. */
+  
